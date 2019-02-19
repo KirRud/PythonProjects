@@ -1,0 +1,3613 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<kml xmlns="http://earth.google.com/kml/2.1">
+  <Document>
+    <name>INGV, ISIDe real-time earthquakes</name>
+    <open>1</open>
+    <ScreenOverlay>
+      <name>ISIDe Logo</name>
+      <overlayXY x="1" y="0" xunits="fraction" yunits="pixels"/>
+      <screenXY x=".2" y=".93" xunits="fraction" yunits="fraction"/>
+      <rotationXY x="0" y="0" xunits="pixels" yunits="pixels"/>
+      <size x="0" y="0" xunits="pixels" yunits="pixels"/>
+      <Icon>
+        <href>http://iside.rm.ingv.it/images/iside.png</href>
+      </Icon>
+    </ScreenOverlay>
+    <ScreenOverlay>
+      <name>Legend</name>
+      <visibility>1</visibility>
+      <overlayXY x="1" y="0" xunits="pixels" yunits="pixels"/>
+      <screenXY x="x.28" y="0.12" fraction="fraction" yunits="fraction"/>
+      <rotationXY x="0" y="0" xunits="pixels" yunits="pixels"/>
+      <size x="0" y="0" xunits="pixels" yunits="pixels"/>
+      <Icon>
+        <href>http://iside.rm.ingv.it/images/legend_kml.png</href>
+      </Icon>
+    </ScreenOverlay>
+    <Style id="red-active">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/red.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="red-inactive">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/red.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="star_red-active">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/star_red.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="star_red-inactive">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/star_red.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="blue-active">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/blue.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="blue-inactive">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/blue.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="star_blue-active">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/star_blue.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="star_blue-inactive">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/star_blue.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="green-active">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/green.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="green-inactive">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/green.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="star_green-active">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/star_green.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="star_green-inactive">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/star_green.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="orange-active">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/orange.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="orange-inactive">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/orange.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="star_orange-active">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/star_orange.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="star_orange-inactive">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/star_orange.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="purple-active">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/purple.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="purple-inactive">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/purple.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="star_purple-active">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/star_purple.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="star_purple-inactive">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/star_purple.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="yellow-active">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/yellow.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="yellow-inactive">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/yellow.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="star_yellow-active">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/star_yellow.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="star_yellow-inactive">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/star_yellow.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="station_on-active">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/station_green.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="station_on-inactive">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/station_green.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="station_off-active">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/station_yellow.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="station_off-inactive">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/station_yellow.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="station_closed-active">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/station_red.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="station_closed-inactive">
+      <IconStyle>
+        <Icon>
+          <href>http://iside.rm.ingv.it/images/station_red.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="red">
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#red-active</styleUrl>
+      </Pair>
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#red-inactive</styleUrl>
+      </Pair>
+    </StyleMap>
+    <StyleMap id="star_red">
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#star_red-active</styleUrl>
+      </Pair>
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#star_red-inactive</styleUrl>
+      </Pair>
+    </StyleMap>
+    <StyleMap id="blue">
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#blue-active</styleUrl>
+      </Pair>
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#blue-inactive</styleUrl>
+      </Pair>
+    </StyleMap>
+    <StyleMap id="star_blue">
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#star_blue-active</styleUrl>
+      </Pair>
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#star_blue-inactive</styleUrl>
+      </Pair>
+    </StyleMap>
+    <StyleMap id="green">
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#green-active</styleUrl>
+      </Pair>
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#green-inactive</styleUrl>
+      </Pair>
+    </StyleMap>
+    <StyleMap id="star_green">
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#star_green-active</styleUrl>
+      </Pair>
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#star_green-inactive</styleUrl>
+      </Pair>
+    </StyleMap>
+    <StyleMap id="orange">
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#orange-active</styleUrl>
+      </Pair>
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#orange-inactive</styleUrl>
+      </Pair>
+    </StyleMap>
+    <StyleMap id="star_orange">
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#star_orange-active</styleUrl>
+      </Pair>
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#star_orange-inactive</styleUrl>
+      </Pair>
+    </StyleMap>
+    <StyleMap id="purple">
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#purple-active</styleUrl>
+      </Pair>
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#purple-inactive</styleUrl>
+      </Pair>
+    </StyleMap>
+    <StyleMap id="star_purple">
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#star_purple-active</styleUrl>
+      </Pair>
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#star_purple-inactive</styleUrl>
+      </Pair>
+    </StyleMap>
+    <StyleMap id="yellow">
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#yellow-active</styleUrl>
+      </Pair>
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#yellow-inactive</styleUrl>
+      </Pair>
+    </StyleMap>
+    <StyleMap id="star_yellow">
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#star_yellow-active</styleUrl>
+      </Pair>
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#star_yellow-inactive</styleUrl>
+      </Pair>
+    </StyleMap>
+    <StyleMap id="station_on">
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#station_on-active</styleUrl>
+      </Pair>
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#station_on-inactive</styleUrl>
+      </Pair>
+    </StyleMap>
+    <StyleMap id="station_off">
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#station_off-active</styleUrl>
+      </Pair>
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#station_off-inactive</styleUrl>
+      </Pair>
+    </StyleMap>
+    <StyleMap id="station_closed">
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#station_closed-active</styleUrl>
+      </Pair>
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#station_closed-inactive</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <Placemark>
+        <name>ML 3.2 - 2017-06-27 07:23:19 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-06-27 07:23:19 UTC</li><li>Depth (Km): 8.0</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>12.7018, 42.8398, 8.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2017-06-28 00:56:43 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-06-28 00:56:43 UTC</li><li>Depth (Km): 13.0</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.2153, 42.7767, 13.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2017-06-29 08:55:46 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-06-29 08:55:46 UTC</li><li>Depth (Km): 11.2</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.2152, 42.639, 11.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.5 - 2017-06-29 21:41:21 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-06-29 21:41:21 UTC</li><li>Depth (Km): 10.7</li><li>Magnitude (Mw): 3.5</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.2107, 42.6347, 10.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.8 - 2017-06-30 00:25:17 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-06-30 00:25:17 UTC</li><li>Depth (Km): 12.2</li><li>Magnitude (Mw): 3.8</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.2142, 42.6312, 12.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2017-06-30 00:39:58 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-06-30 00:39:58 UTC</li><li>Depth (Km): 9.3</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>12.0633, 43.6563, 9.3</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 4.0 - 2017-07-01 08:10:34 UTC</name>
+        <styleUrl>#star_orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-01 08:10:34 UTC</li><li>Depth (Km): 4.0</li><li>Magnitude (ML): 4.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.6</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>7.1543, 46.438, 4.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2017-07-01 19:12:26 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-01 19:12:26 UTC</li><li>Depth (Km): 7.8</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.0777, 41.9888, 7.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.6 - 2017-07-01 19:17:26 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-01 19:17:26 UTC</li><li>Depth (Km): 8.4</li><li>Magnitude (Mw): 3.6</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.3152, 42.6497, 8.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.2 - 2017-07-02 19:21:21 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-02 19:21:21 UTC</li><li>Depth (Km): 6.0</li><li>Magnitude (Mw): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.1642, 42.9132, 6.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 4.7 - 2017-07-03 11:18:21 UTC</name>
+        <styleUrl>#star_yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-03 11:18:21 UTC</li><li>Depth (Km): 10.1</li><li>Magnitude (Mw): 4.7</li><li>Author: SURVEY-INGV-A</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.6</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>20.8557, 41.1829, 10.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.7 - 2017-07-06 06:04:48 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-06 06:04:48 UTC</li><li>Depth (Km): 29.4</li><li>Magnitude (Mw): 3.7</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>16.8978, 38.8643, 29.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2017-07-06 16:58:33 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-06 16:58:33 UTC</li><li>Depth (Km): 1.8</li><li>Magnitude (ML): 3.3</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.9612, 46.0248, 1.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2017-07-08 04:04:46 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-08 04:04:46 UTC</li><li>Depth (Km): 8.3</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.003, 42.9987, 8.3</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.4 - 2017-07-08 05:17:39 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-08 05:17:39 UTC</li><li>Depth (Km): 7.0</li><li>Magnitude (ML): 3.4</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0008, 42.9943, 7.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2017-07-08 05:26:26 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-08 05:26:26 UTC</li><li>Depth (Km): 8.3</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>12.9957, 43.0002, 8.3</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2017-07-09 22:39:24 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-09 22:39:24 UTC</li><li>Depth (Km): 9.9</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.1428, 42.7967, 9.9</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.4 - 2017-07-10 03:16:27 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-10 03:16:27 UTC</li><li>Depth (Km): 28.0</li><li>Magnitude (ML): 3.4</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.9388, 41.8392, 28.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2017-07-14 06:22:17 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-14 06:22:17 UTC</li><li>Depth (Km): 30.5</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>17.0318, 38.98, 30.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>mb 5.2 - 2017-07-15 20:30:18 UTC</name>
+        <styleUrl>#star_orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-15 20:30:18 UTC</li><li>Depth (Km): 10.0</li><li>Magnitude (mb): 5.2</li><li>Author: SURVEY-INGV-A</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.7</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>25.429, 34.9506, 10.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2017-07-19 20:16:53 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-19 20:16:53 UTC</li><li>Depth (Km): 20.2</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0927, 36.1198, 20.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mwp 6.7 - 2017-07-20 22:31:11 UTC</name>
+        <styleUrl>#star_orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-20 22:31:11 UTC</li><li>Depth (Km): 10.0</li><li>Magnitude (Mwp): 6.7</li><li>Author: SURVEY-INGV-A</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.8</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>27.4504, 36.9088, 10.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.2 - 2017-07-21 17:03:55 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-21 17:03:55 UTC</li><li>Depth (Km): 9.6</li><li>Magnitude (Mw): 3.2</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>10.6975, 45.661, 9.6</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2017-07-22 01:05:25 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-22 01:05:25 UTC</li><li>Depth (Km): 30.0</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>19.7672, 41.4112, 30.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 4.0 - 2017-07-22 02:13:08 UTC</name>
+        <styleUrl>#star_yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-22 02:13:08 UTC</li><li>Depth (Km): 13.3</li><li>Magnitude (Mw): 4.0</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.6</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.3255, 42.567, 13.3</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2017-07-24 15:31:01 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-24 15:31:01 UTC</li><li>Depth (Km): 9.7</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0802, 43.0148, 9.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2017-07-27 05:39:39 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-27 05:39:39 UTC</li><li>Depth (Km): 8.8</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.1807, 42.7303, 8.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2017-07-30 08:05:27 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-30 08:05:27 UTC</li><li>Depth (Km): 14.9</li><li>Magnitude (ML): 3.3</li><li>Author: SURVEY-INGV-CT</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.784, 38.484, 14.9</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2017-07-30 16:58:51 UTC</name>
+        <styleUrl>#blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-30 16:58:51 UTC</li><li>Depth (Km): 278.6</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.6642, 39.6513, 278.6</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.5 - 2017-07-30 21:19:33 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-30 21:19:33 UTC</li><li>Depth (Km): 10.0</li><li>Magnitude (ML): 3.5</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.2937, 42.4472, 10.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2017-07-31 02:37:21 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-31 02:37:21 UTC</li><li>Depth (Km): 12.0</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.3025, 42.7342, 12.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>mb 5.2 - 2017-07-31 21:29:13 UTC</name>
+        <styleUrl>#star_yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-07-31 21:29:13 UTC</li><li>Depth (Km): 19.5</li><li>Magnitude (mb): 5.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.7</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>24.003, 34.587, 19.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2017-08-07 01:29:22 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-07 01:29:22 UTC</li><li>Depth (Km): 10.5</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.1767, 42.8218, 10.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.7 - 2017-08-08 04:33:53 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-08 04:33:53 UTC</li><li>Depth (Km): 10.0</li><li>Magnitude (Mw): 3.7</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.2163, 42.3967, 10.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>mb 5.0 - 2017-08-08 07:42:22 UTC</name>
+        <styleUrl>#star_yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-08 07:42:22 UTC</li><li>Depth (Km): 10.4</li><li>Magnitude (mb): 5.0</li><li>Author: SURVEY-INGV-A</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.7</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>27.6262, 36.8631, 10.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.8 - 2017-08-08 09:35:07 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-08 09:35:07 UTC</li><li>Depth (Km): 10.0</li><li>Magnitude (ML): 3.8</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.6977, 45.1572, 10.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2017-08-08 14:29:24 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-08 14:29:24 UTC</li><li>Depth (Km): 8.6</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.859, 35.5785, 8.6</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.9 - 2017-08-08 20:42:36 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-08 20:42:36 UTC</li><li>Depth (Km): 8.0</li><li>Magnitude (Mw): 3.9</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.6892, 45.1517, 8.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.4 - 2017-08-08 21:53:58 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-08 21:53:58 UTC</li><li>Depth (Km): 10.0</li><li>Magnitude (ML): 3.4</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.6228, 45.2037, 10.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2017-08-08 22:58:38 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-08 22:58:38 UTC</li><li>Depth (Km): 21.5</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.3053, 43.0618, 21.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2017-08-08 23:42:25 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-08 23:42:25 UTC</li><li>Depth (Km): 10.1</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.7943, 45.1598, 10.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.9 - 2017-08-09 11:37:05 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-09 11:37:05 UTC</li><li>Depth (Km): 8.6</li><li>Magnitude (Mw): 3.9</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.7328, 45.1307, 8.6</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 4.3 - 2017-08-11 02:38:34 UTC</name>
+        <styleUrl>#star_blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-11 02:38:34 UTC</li><li>Depth (Km): 229.8</li><li>Magnitude (Mw): 4.3</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.6</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.8505, 39.2918, 229.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2017-08-13 15:43:39 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-13 15:43:39 UTC</li><li>Depth (Km): 15.1</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.2562, 42.801, 15.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2017-08-14 06:45:01 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-14 06:45:01 UTC</li><li>Depth (Km): 10.3</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.2213, 42.6112, 10.3</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2017-08-15 19:25:33 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-15 19:25:33 UTC</li><li>Depth (Km): 9.8</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.1443, 43.0023, 9.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 4.9 - 2017-08-16 15:53:29 UTC</name>
+        <styleUrl>#star_blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-16 15:53:29 UTC</li><li>Depth (Km): 102.2</li><li>Magnitude (ML): 4.9</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.6</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>24.62, 36.571, 102.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2017-08-19 11:38:10 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-19 11:38:10 UTC</li><li>Depth (Km): 21.2</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV-CT</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.84, 37.665, 21.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.9 - 2017-08-21 18:57:51 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-21 18:57:51 UTC</li><li>Depth (Km): 1.5</li><li>Magnitude (Mw): 3.9</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.8977, 40.7383, 1.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.8 - 2017-08-23 09:16:24 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-23 09:16:24 UTC</li><li>Depth (Km): 12.5</li><li>Magnitude (Mw): 3.8</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.86, 35.663, 12.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2017-08-25 03:44:47 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-25 03:44:47 UTC</li><li>Depth (Km): 8.1</li><li>Magnitude (ML): 3.3</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.1928, 43.1078, 8.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.3 - 2017-08-25 15:32:19 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-25 15:32:19 UTC</li><li>Depth (Km): 6.8</li><li>Magnitude (Mw): 3.3</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.1897, 43.1022, 6.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 4.0 - 2017-08-25 17:10:45 UTC</name>
+        <styleUrl>#star_orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-25 17:10:45 UTC</li><li>Depth (Km): 8.6</li><li>Magnitude (ML): 4.0</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.6</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.235, 35.5687, 8.6</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2017-08-25 21:57:46 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-08-25 21:57:46 UTC</li><li>Depth (Km): 6.3</li><li>Magnitude (ML): 3.3</li><li>Author: SURVEY-INGV-CT</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.891, 37.617, 6.3</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2017-09-01 09:56:13 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-01 09:56:13 UTC</li><li>Depth (Km): 8.0</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0043, 42.9892, 8.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2017-09-01 10:15:51 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-01 10:15:51 UTC</li><li>Depth (Km): 9.5</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0038, 42.9973, 9.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.2 - 2017-09-01 10:29:31 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-01 10:29:31 UTC</li><li>Depth (Km): 8.7</li><li>Magnitude (Mw): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0037, 42.9967, 8.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>mb 5.1 - 2017-09-01 16:48:33 UTC</name>
+        <styleUrl>#star_blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-01 16:48:33 UTC</li><li>Depth (Km): 74.4</li><li>Magnitude (mb): 5.1</li><li>Author: SURVEY-INGV-A</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.7</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>28.0085, 35.8365, 74.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2017-09-01 18:31:03 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-01 18:31:03 UTC</li><li>Depth (Km): 28.1</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.1318, 38.578, 28.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.4 - 2017-09-02 00:45:31 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-02 00:45:31 UTC</li><li>Depth (Km): 10.0</li><li>Magnitude (ML): 3.4</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.247, 35.4878, 10.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.4 - 2017-09-03 09:15:46 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-03 09:15:46 UTC</li><li>Depth (Km): 3.2</li><li>Magnitude (ML): 3.4</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>10.6808, 45.7338, 3.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.4 - 2017-09-04 06:46:50 UTC</name>
+        <styleUrl>#blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-04 06:46:50 UTC</li><li>Depth (Km): 261.6</li><li>Magnitude (ML): 3.4</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.0748, 38.5097, 261.6</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.3 - 2017-09-04 18:54:02 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-04 18:54:02 UTC</li><li>Depth (Km): 13.8</li><li>Magnitude (Mw): 3.3</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.3303, 42.5467, 13.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.7 - 2017-09-05 04:34:21 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-05 04:34:21 UTC</li><li>Depth (Km): 13.6</li><li>Magnitude (Mw): 3.7</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.3328, 42.5435, 13.6</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2017-09-06 01:52:12 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-06 01:52:12 UTC</li><li>Depth (Km): 10.0</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.2455, 35.4425, 10.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.4 - 2017-09-06 12:22:29 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-06 12:22:29 UTC</li><li>Depth (Km): 9.0</li><li>Magnitude (Mw): 3.4</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>11.9812, 46.2692, 9.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2017-09-06 12:30:32 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-06 12:30:32 UTC</li><li>Depth (Km): 10.1</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>11.9897, 46.2683, 10.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2017-09-09 18:12:30 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-09 18:12:30 UTC</li><li>Depth (Km): 9.9</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>12.0983, 44.5965, 9.9</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.7 - 2017-09-10 18:00:55 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-10 18:00:55 UTC</li><li>Depth (Km): 24.5</li><li>Magnitude (ML): 3.7</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>9.6873, 44.8163, 24.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.7 - 2017-09-10 19:58:09 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-10 19:58:09 UTC</li><li>Depth (Km): 8.1</li><li>Magnitude (Mw): 3.7</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.3242, 42.0843, 8.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2017-09-16 10:34:55 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-16 10:34:55 UTC</li><li>Depth (Km): 10.0</li><li>Magnitude (ML): 3.3</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>16.6837, 46.241, 10.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2017-09-16 11:28:15 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-16 11:28:15 UTC</li><li>Depth (Km): 6.7</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>12.6682, 42.6622, 6.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2017-09-18 00:53:47 UTC</name>
+        <styleUrl>#blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-18 00:53:47 UTC</li><li>Depth (Km): 129.0</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.4968, 38.3287, 129.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2017-09-18 07:21:27 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-18 07:21:27 UTC</li><li>Depth (Km): 5.5</li><li>Magnitude (ML): 3.3</li><li>Author: SURVEY-INGV-CT</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.924, 37.73, 5.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.8 - 2017-09-18 16:47:11 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-18 16:47:11 UTC</li><li>Depth (Km): 21.7</li><li>Magnitude (Mw): 3.8</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>20.0378, 40.0117, 21.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.2 - 2017-09-21 04:28:11 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-21 04:28:11 UTC</li><li>Depth (Km): 7.4</li><li>Magnitude (Mw): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.1065, 38.2242, 7.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2017-09-23 22:30:42 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-23 22:30:42 UTC</li><li>Depth (Km): 15.8</li><li>Magnitude (ML): 3.3</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>12.7372, 35.4372, 15.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2017-09-26 01:02:41 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-09-26 01:02:41 UTC</li><li>Depth (Km): 8.8</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.3507, 42.5638, 8.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.7 - 2017-10-02 01:26:57 UTC</name>
+        <styleUrl>#blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-10-02 01:26:57 UTC</li><li>Depth (Km): 290.5</li><li>Magnitude (ML): 3.7</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.9833, 38.806, 290.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2017-10-05 18:04:50 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-10-05 18:04:50 UTC</li><li>Depth (Km): 27.0</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.97, 37.9512, 27.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2017-10-07 11:36:55 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-10-07 11:36:55 UTC</li><li>Depth (Km): 8.1</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>10.8887, 43.2687, 8.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2017-10-07 22:20:23 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-10-07 22:20:23 UTC</li><li>Depth (Km): 9.1</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0777, 43.0107, 9.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.5 - 2017-10-08 11:48:32 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-10-08 11:48:32 UTC</li><li>Depth (Km): 19.3</li><li>Magnitude (ML): 3.5</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.1668, 35.4993, 19.3</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2017-10-14 02:02:18 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-10-14 02:02:18 UTC</li><li>Depth (Km): 8.7</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0767, 42.8232, 8.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.5 - 2017-10-14 07:12:21 UTC</name>
+        <styleUrl>#blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-10-14 07:12:21 UTC</li><li>Depth (Km): 268.6</li><li>Magnitude (ML): 3.5</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.3922, 39.0017, 268.6</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.5 - 2017-10-15 09:51:48 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-10-15 09:51:48 UTC</li><li>Depth (Km): 36.6</li><li>Magnitude (ML): 3.5</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>16.4002, 36.9525, 36.6</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2017-10-15 16:43:32 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-10-15 16:43:32 UTC</li><li>Depth (Km): 8.4</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0757, 42.8277, 8.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.7 - 2017-10-18 13:10:55 UTC</name>
+        <styleUrl>#blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-10-18 13:10:55 UTC</li><li>Depth (Km): 280.2</li><li>Magnitude (ML): 3.7</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.6328, 39.7998, 280.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.2 - 2017-10-19 05:34:54 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-10-19 05:34:54 UTC</li><li>Depth (Km): 9.4</li><li>Magnitude (Mw): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.2333, 42.8507, 9.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.3 - 2017-10-20 16:16:37 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-10-20 16:16:37 UTC</li><li>Depth (Km): 10.3</li><li>Magnitude (Mw): 3.3</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.1292, 42.8058, 10.3</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2017-10-20 20:27:34 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-10-20 20:27:34 UTC</li><li>Depth (Km): 11.1</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.1642, 42.7078, 11.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2017-10-23 19:11:34 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-10-23 19:11:34 UTC</li><li>Depth (Km): 20.6</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.6522, 37.2712, 20.6</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2017-10-25 03:41:17 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-10-25 03:41:17 UTC</li><li>Depth (Km): 1.4</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>6.4703, 45.4242, 1.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.8 - 2017-10-26 22:38:35 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-10-26 22:38:35 UTC</li><li>Depth (Km): 14.2</li><li>Magnitude (Mw): 3.8</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.7043, 40.3133, 14.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2017-10-27 01:09:52 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-10-27 01:09:52 UTC</li><li>Depth (Km): 5.9</li><li>Magnitude (ML): 3.3</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>6.4623, 45.4263, 5.9</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2017-10-31 04:59:03 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-10-31 04:59:03 UTC</li><li>Depth (Km): 10.8</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>10.9073, 45.8395, 10.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.7 - 2017-11-01 23:12:31 UTC</name>
+        <styleUrl>#purple</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-11-01 23:12:31 UTC</li><li>Depth (Km): 468.4</li><li>Magnitude (ML): 3.7</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.5307, 40.2823, 468.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.5 - 2017-11-02 18:04:14 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-11-02 18:04:14 UTC</li><li>Depth (Km): 8.6</li><li>Magnitude (Mw): 3.5</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.1377, 42.6548, 8.6</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.5 - 2017-11-03 18:15:40 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-11-03 18:15:40 UTC</li><li>Depth (Km): 7.4</li><li>Magnitude (ML): 3.5</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>11.3663, 47.1413, 7.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2017-11-04 03:22:26 UTC</name>
+        <styleUrl>#blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-11-04 03:22:26 UTC</li><li>Depth (Km): 132.4</li><li>Magnitude (ML): 3.3</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.5707, 38.4973, 132.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2017-11-06 04:55:53 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-11-06 04:55:53 UTC</li><li>Depth (Km): 10.4</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>10.7885, 44.2623, 10.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>mb 5.1 - 2017-11-07 02:40:32 UTC</name>
+        <styleUrl>#star_blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-11-07 02:40:32 UTC</li><li>Depth (Km): 70.5</li><li>Magnitude (mb): 5.1</li><li>Author: SURVEY-INGV-A</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.7</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>28.4656, 36.1389, 70.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.5 - 2017-11-10 15:49:05 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-11-10 15:49:05 UTC</li><li>Depth (Km): 27.7</li><li>Magnitude (ML): 3.5</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.6263, 37.7658, 27.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.5 - 2017-11-12 01:34:25 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-11-12 01:34:25 UTC</li><li>Depth (Km): 30.6</li><li>Magnitude (ML): 3.5</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.7727, 37.1737, 30.6</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.6 - 2017-11-15 10:40:01 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-11-15 10:40:01 UTC</li><li>Depth (Km): 4.7</li><li>Magnitude (ML): 3.6</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.9873, 45.2108, 4.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2017-11-17 12:10:25 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-11-17 12:10:25 UTC</li><li>Depth (Km): 10.0</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>6.455, 45.4222, 10.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2017-11-19 00:45:20 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-11-19 00:45:20 UTC</li><li>Depth (Km): 28.6</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.8667, 41.2415, 28.6</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2017-11-19 12:10:12 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-11-19 12:10:12 UTC</li><li>Depth (Km): 24.6</li><li>Magnitude (ML): 3.3</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>10.0477, 44.6567, 24.6</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 4.4 - 2017-11-19 12:37:44 UTC</name>
+        <styleUrl>#star_green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-11-19 12:37:44 UTC</li><li>Depth (Km): 22.4</li><li>Magnitude (Mw): 4.4</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.6</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>10.0337, 44.6603, 22.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2017-11-21 09:22:02 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-11-21 09:22:02 UTC</li><li>Depth (Km): 10.3</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>8.5425, 47.1293, 10.3</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.6 - 2017-11-27 01:43:07 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-11-27 01:43:07 UTC</li><li>Depth (Km): 5.0</li><li>Magnitude (ML): 3.6</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.9013, 41.9977, 5.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2017-11-28 21:40:28 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-11-28 21:40:28 UTC</li><li>Depth (Km): 56.1</li><li>Magnitude (ML): 3.3</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>18.6762, 37.1372, 56.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 4.0 - 2017-12-03 23:34:11 UTC</name>
+        <styleUrl>#star_orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-12-03 23:34:11 UTC</li><li>Depth (Km): 7.6</li><li>Magnitude (Mw): 4.0</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.6</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.3252, 42.6242, 7.6</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2017-12-06 03:57:21 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-12-06 03:57:21 UTC</li><li>Depth (Km): 26.2</li><li>Magnitude (ML): 3.3</li><li>Author: SURVEY-INGV-CT</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.847, 38.321, 26.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2017-12-08 22:30:29 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-12-08 22:30:29 UTC</li><li>Depth (Km): 42.4</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>7.7253, 44.7518, 42.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2017-12-12 03:22:32 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-12-12 03:22:32 UTC</li><li>Depth (Km): 10.0</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.4295, 42.4847, 10.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2017-12-12 20:11:01 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-12-12 20:11:01 UTC</li><li>Depth (Km): 4.9</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.6772, 38.1022, 4.9</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.4 - 2017-12-13 11:18:28 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-12-13 11:18:28 UTC</li><li>Depth (Km): 17.7</li><li>Magnitude (ML): 3.4</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.694, 36.506, 17.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.5 - 2017-12-13 11:52:16 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-12-13 11:52:16 UTC</li><li>Depth (Km): 17.6</li><li>Magnitude (ML): 3.5</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.6577, 36.5063, 17.6</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.8 - 2017-12-14 01:13:45 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-12-14 01:13:45 UTC</li><li>Depth (Km): 15.3</li><li>Magnitude (ML): 3.8</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.6468, 36.4362, 15.3</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.6 - 2017-12-14 01:59:20 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-12-14 01:59:20 UTC</li><li>Depth (Km): 16.0</li><li>Magnitude (ML): 3.6</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.6427, 36.5133, 16.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2017-12-23 22:01:15 UTC</name>
+        <styleUrl>#blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-12-23 22:01:15 UTC</li><li>Depth (Km): 123.5</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.6572, 38.4948, 123.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2017-12-24 04:12:49 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-12-24 04:12:49 UTC</li><li>Depth (Km): 5.1</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.8527, 45.3005, 5.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>mb 4.8 - 2017-12-25 23:47:07 UTC</name>
+        <styleUrl>#star_yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-12-25 23:47:07 UTC</li><li>Depth (Km): 19.8</li><li>Magnitude (mb): 4.8</li><li>Author: SURVEY-INGV-A</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.6</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>20.517, 38.7325, 19.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2017-12-26 11:45:40 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2017-12-26 11:45:40 UTC</li><li>Depth (Km): 9.3</li><li>Magnitude (ML): 3.3</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.1382, 42.7332, 9.3</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2018-01-02 11:07:36 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-01-02 11:07:36 UTC</li><li>Depth (Km): 7.0</li><li>Magnitude (ML): 3.3</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.2823, 38.6993, 7.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-01-02 11:24:32 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-01-02 11:24:32 UTC</li><li>Depth (Km): 6.6</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.29, 38.6975, 6.6</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>mb 5.2 - 2018-01-04 10:46:12 UTC</name>
+        <styleUrl>#star_yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-01-04 10:46:12 UTC</li><li>Depth (Km): 10.1</li><li>Magnitude (mb): 5.2</li><li>Author: SURVEY-INGV-A</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.7</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>19.8865, 42.619, 10.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2018-01-05 06:25:20 UTC</name>
+        <styleUrl>#blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-01-05 06:25:20 UTC</li><li>Depth (Km): 157.0</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.3865, 38.4092, 157.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2018-01-05 18:54:49 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-01-05 18:54:49 UTC</li><li>Depth (Km): 9.0</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.1553, 42.9217, 9.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2018-01-09 14:43:10 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-01-09 14:43:10 UTC</li><li>Depth (Km): 20.2</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV-CT</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.254, 38.432, 20.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.6 - 2018-01-09 15:58:01 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-01-09 15:58:01 UTC</li><li>Depth (Km): 19.0</li><li>Magnitude (ML): 3.6</li><li>Author: SURVEY-INGV-CT</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.444, 38.417, 19.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.4 - 2018-01-09 16:57:59 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-01-09 16:57:59 UTC</li><li>Depth (Km): 21.6</li><li>Magnitude (ML): 3.4</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.3378, 38.5002, 21.6</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.4 - 2018-01-11 03:48:02 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-01-11 03:48:02 UTC</li><li>Depth (Km): 8.1</li><li>Magnitude (Mw): 3.4</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.29, 42.6412, 8.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.6 - 2018-01-16 10:49:36 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-01-16 10:49:36 UTC</li><li>Depth (Km): 18.9</li><li>Magnitude (ML): 3.6</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>11.972, 38.5932, 18.9</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.9 - 2018-01-17 10:22:19 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-01-17 10:22:19 UTC</li><li>Depth (Km): 7.9</li><li>Magnitude (ML): 3.9</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.5683, 46.3163, 7.9</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-01-17 16:55:16 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-01-17 16:55:16 UTC</li><li>Depth (Km): 8.7</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0262, 43.0657, 8.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2018-01-18 04:01:07 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-01-18 04:01:07 UTC</li><li>Depth (Km): 9.5</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0247, 43.0692, 9.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2018-01-19 15:36:35 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-01-19 15:36:35 UTC</li><li>Depth (Km): 8.0</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0262, 43.0055, 8.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.9 - 2018-01-19 17:39:43 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-01-19 17:39:43 UTC</li><li>Depth (Km): 9.2</li><li>Magnitude (ML): 3.9</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0562, 46.4198, 9.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.7 - 2018-01-27 18:29:13 UTC</name>
+        <styleUrl>#blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-01-27 18:29:13 UTC</li><li>Depth (Km): 78.5</li><li>Magnitude (ML): 3.7</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>16.3427, 38.9632, 78.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2018-01-29 19:02:39 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-01-29 19:02:39 UTC</li><li>Depth (Km): 10.1</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.1157, 42.9348, 10.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.8 - 2018-02-01 01:47:32 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-02-01 01:47:32 UTC</li><li>Depth (Km): 11.4</li><li>Magnitude (ML): 3.8</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>9.9928, 47.1813, 11.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>mb 4.8 - 2018-02-03 12:53:11 UTC</name>
+        <styleUrl>#star_yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-02-03 12:53:11 UTC</li><li>Depth (Km): 19.7</li><li>Magnitude (mb): 4.8</li><li>Author: SURVEY-INGV-A</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.6</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>16.853, 43.3178, 19.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.2 - 2018-02-04 12:45:33 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-02-04 12:45:33 UTC</li><li>Depth (Km): 11.1</li><li>Magnitude (Mw): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.2992, 42.6538, 11.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.7 - 2018-02-10 02:16:17 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-02-10 02:16:17 UTC</li><li>Depth (Km): 17.0</li><li>Magnitude (Mw): 3.7</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.7562, 38.2165, 17.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.9 - 2018-02-12 05:58:18 UTC</name>
+        <styleUrl>#blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-02-12 05:58:18 UTC</li><li>Depth (Km): 96.2</li><li>Magnitude (ML): 3.9</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>20.8115, 39.4832, 96.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2018-02-14 17:53:33 UTC</name>
+        <styleUrl>#blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-02-14 17:53:33 UTC</li><li>Depth (Km): 106.0</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.7463, 39.0453, 106.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2018-02-15 19:16:01 UTC</name>
+        <styleUrl>#purple</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-02-15 19:16:01 UTC</li><li>Depth (Km): 321.8</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.063, 40.3657, 321.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 4.0 - 2018-02-16 11:21:48 UTC</name>
+        <styleUrl>#star_blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-02-16 11:21:48 UTC</li><li>Depth (Km): 293.6</li><li>Magnitude (ML): 4.0</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.6</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.5733, 39.7797, 293.6</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-02-17 23:05:23 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-02-17 23:05:23 UTC</li><li>Depth (Km): 18.1</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>6.6593, 43.4673, 18.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.4 - 2018-02-18 01:13:47 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-02-18 01:13:47 UTC</li><li>Depth (Km): 17.9</li><li>Magnitude (ML): 3.4</li><li>Author: SURVEY-INGV-CT</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.83, 38.477, 17.9</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2018-02-18 04:47:22 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-02-18 04:47:22 UTC</li><li>Depth (Km): 15.9</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>6.6507, 43.5737, 15.9</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>mb 5.0 - 2018-02-21 23:44:56 UTC</name>
+        <styleUrl>#star_yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-02-21 23:44:56 UTC</li><li>Depth (Km): 15.2</li><li>Magnitude (mb): 5.0</li><li>Author: SURVEY-INGV-A</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.7</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>20.4478, 37.7402, 15.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2018-02-22 04:33:25 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-02-22 04:33:25 UTC</li><li>Depth (Km): 10.0</li><li>Magnitude (ML): 3.3</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>10.3673, 44.412, 10.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.8 - 2018-02-25 08:16:29 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-02-25 08:16:29 UTC</li><li>Depth (Km): 7.7</li><li>Magnitude (ML): 3.8</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>12.5938, 46.3763, 7.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.6 - 2018-02-25 15:53:04 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-02-25 15:53:04 UTC</li><li>Depth (Km): 7.0</li><li>Magnitude (ML): 3.6</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>12.5987, 46.3812, 7.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-02-25 17:40:14 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-02-25 17:40:14 UTC</li><li>Depth (Km): 4.9</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>12.6217, 46.3797, 4.9</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-02-27 12:35:12 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-02-27 12:35:12 UTC</li><li>Depth (Km): 5.4</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.505, 37.8375, 5.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.7 - 2018-03-05 21:50:35 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-03-05 21:50:35 UTC</li><li>Depth (Km): 6.8</li><li>Magnitude (Mw): 3.7</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>11.9653, 43.9293, 6.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 4.4 - 2018-03-07 20:15:15 UTC</name>
+        <styleUrl>#star_purple</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-03-07 20:15:15 UTC</li><li>Depth (Km): 379.0</li><li>Magnitude (ML): 4.4</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.6</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.5012, 39.325, 379.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2018-03-08 08:50:47 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-03-08 08:50:47 UTC</li><li>Depth (Km): 0.1</li><li>Magnitude (ML): 3.3</li><li>Author: SURVEY-INGV-CT</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.937, 37.692, 0.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>mb 4.7 - 2018-03-08 16:42:37 UTC</name>
+        <styleUrl>#star_yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-03-08 16:42:37 UTC</li><li>Depth (Km): 19.5</li><li>Magnitude (mb): 4.7</li><li>Author: SURVEY-INGV-A</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.6</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>10.2568, 36.9352, 19.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.5 - 2018-03-08 22:48:46 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-03-08 22:48:46 UTC</li><li>Depth (Km): 8.0</li><li>Magnitude (Mw): 3.5</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0265, 43.0608, 8.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.3 - 2018-03-08 23:32:18 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-03-08 23:32:18 UTC</li><li>Depth (Km): 7.8</li><li>Magnitude (Mw): 3.3</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0268, 43.0615, 7.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2018-03-13 12:59:28 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-03-13 12:59:28 UTC</li><li>Depth (Km): 7.0</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV-CT</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.3, 38.497, 7.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-03-14 06:42:46 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-03-14 06:42:46 UTC</li><li>Depth (Km): 20.7</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.4955, 42.7447, 20.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2018-03-19 17:46:41 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-03-19 17:46:41 UTC</li><li>Depth (Km): 5.7</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV-CT</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.97, 37.755, 5.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2018-03-22 17:32:58 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-03-22 17:32:58 UTC</li><li>Depth (Km): 26.5</li><li>Magnitude (ML): 3.3</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>16.3773, 39.186, 26.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.7 - 2018-03-22 23:40:24 UTC</name>
+        <styleUrl>#blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-03-22 23:40:24 UTC</li><li>Depth (Km): 267.4</li><li>Magnitude (ML): 3.7</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.4663, 39.239, 267.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-03-23 16:50:29 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-03-23 16:50:29 UTC</li><li>Depth (Km): 21.8</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>12.723, 36.7163, 21.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.7 - 2018-03-23 23:31:56 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-03-23 23:31:56 UTC</li><li>Depth (Km): 29.7</li><li>Magnitude (Mw): 3.7</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>17.6938, 40.8003, 29.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-03-25 03:33:44 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-03-25 03:33:44 UTC</li><li>Depth (Km): 8.6</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0387, 43.0557, 8.6</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.2 - 2018-03-26 22:43:07 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-03-26 22:43:07 UTC</li><li>Depth (Km): 8.0</li><li>Magnitude (Mw): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>12.8827, 43.0465, 8.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-03-27 13:29:49 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-03-27 13:29:49 UTC</li><li>Depth (Km): 16.0</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>7.2528, 44.7817, 16.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-03-28 07:36:52 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-03-28 07:36:52 UTC</li><li>Depth (Km): 10.4</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>11.8432, 45.8768, 10.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.8 - 2018-03-31 01:18:44 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-03-31 01:18:44 UTC</li><li>Depth (Km): 18.8</li><li>Magnitude (Mw): 3.8</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.4697, 42.3528, 18.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.5 - 2018-04-02 22:44:13 UTC</name>
+        <styleUrl>#blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-02 22:44:13 UTC</li><li>Depth (Km): 152.2</li><li>Magnitude (ML): 3.5</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>20.6743, 37.2727, 152.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2018-04-03 07:03:40 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-03 07:03:40 UTC</li><li>Depth (Km): 8.8</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0465, 43.0682, 8.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 4.0 - 2018-04-04 02:19:45 UTC</name>
+        <styleUrl>#star_orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-04 02:19:45 UTC</li><li>Depth (Km): 7.8</li><li>Magnitude (Mw): 4.0</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.6</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0312, 43.0598, 7.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.6 - 2018-04-04 18:41:28 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-04 18:41:28 UTC</li><li>Depth (Km): 8.1</li><li>Magnitude (Mw): 3.6</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0298, 43.0657, 8.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-04-05 08:44:19 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-05 08:44:19 UTC</li><li>Depth (Km): 8.5</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0307, 43.0673, 8.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2018-04-06 01:22:37 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-06 01:22:37 UTC</li><li>Depth (Km): 9.1</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.4508, 40.6818, 9.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 4.0 - 2018-04-08 14:37:33 UTC</name>
+        <styleUrl>#star_green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-08 14:37:33 UTC</li><li>Depth (Km): 38.2</li><li>Magnitude (ML): 4.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.6</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>19.9592, 39.1102, 38.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 4.6 - 2018-04-10 03:11:30 UTC</name>
+        <styleUrl>#star_orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-10 03:11:30 UTC</li><li>Depth (Km): 8.1</li><li>Magnitude (Mw): 4.6</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.6</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0365, 43.0687, 8.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.5 - 2018-04-10 03:46:15 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-10 03:46:15 UTC</li><li>Depth (Km): 8.1</li><li>Magnitude (ML): 3.5</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0448, 43.0632, 8.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.5 - 2018-04-10 04:03:36 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-10 04:03:36 UTC</li><li>Depth (Km): 8.2</li><li>Magnitude (ML): 3.5</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0455, 43.0625, 8.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.5 - 2018-04-10 04:49:40 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-10 04:49:40 UTC</li><li>Depth (Km): 10.4</li><li>Magnitude (Mw): 3.5</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.4408, 42.2738, 10.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2018-04-10 13:11:22 UTC</name>
+        <styleUrl>#blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-10 13:11:22 UTC</li><li>Depth (Km): 241.2</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.85, 38.8212, 241.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.7 - 2018-04-10 13:17:08 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-10 13:17:08 UTC</li><li>Depth (Km): 9.2</li><li>Magnitude (ML): 3.7</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>19.4145, 40.3127, 9.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>mb 5.0 - 2018-04-10 15:56:19 UTC</name>
+        <styleUrl>#star_orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-10 15:56:19 UTC</li><li>Depth (Km): 10.0</li><li>Magnitude (mb): 5.0</li><li>Author: SURVEY-INGV-A</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.7</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>26.2551, 36.6346, 10.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.3 - 2018-04-11 00:00:50 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-11 00:00:50 UTC</li><li>Depth (Km): 7.5</li><li>Magnitude (Mw): 3.3</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0223, 43.0532, 7.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.6 - 2018-04-11 04:41:52 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-11 04:41:52 UTC</li><li>Depth (Km): 6.2</li><li>Magnitude (Mw): 3.6</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>10.8168, 43.134, 6.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.7 - 2018-04-11 04:48:12 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-11 04:48:12 UTC</li><li>Depth (Km): 42.4</li><li>Magnitude (ML): 3.7</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.9405, 37.7313, 42.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-04-12 02:23:59 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-12 02:23:59 UTC</li><li>Depth (Km): 10.3</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>9.9977, 47.1448, 10.3</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.4 - 2018-04-12 13:24:03 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-12 13:24:03 UTC</li><li>Depth (Km): 8.2</li><li>Magnitude (Mw): 3.4</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0388, 43.0638, 8.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2018-04-12 21:59:19 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-12 21:59:19 UTC</li><li>Depth (Km): 8.2</li><li>Magnitude (ML): 3.3</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0388, 43.0533, 8.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>mb 4.1 - 2018-04-18 03:18:16 UTC</name>
+        <styleUrl>#star_yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-18 03:18:16 UTC</li><li>Depth (Km): 19.5</li><li>Magnitude (mb): 4.1</li><li>Author: SURVEY-INGV-A</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.6</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>26.5869, 34.3195, 19.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2018-04-18 19:58:37 UTC</name>
+        <styleUrl>#blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-18 19:58:37 UTC</li><li>Depth (Km): 274.8</li><li>Magnitude (ML): 3.3</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.6777, 39.4833, 274.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2018-04-19 20:17:51 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-19 20:17:51 UTC</li><li>Depth (Km): 8.3</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0305, 43.0862, 8.3</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-04-20 12:38:00 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-20 12:38:00 UTC</li><li>Depth (Km): 9.9</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0298, 43.086, 9.9</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-04-23 05:07:12 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-23 05:07:12 UTC</li><li>Depth (Km): 9.5</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>12.0238, 43.7858, 9.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2018-04-23 09:28:47 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-23 09:28:47 UTC</li><li>Depth (Km): 22.2</li><li>Magnitude (ML): 3.3</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.7885, 38.8237, 22.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.4 - 2018-04-25 01:08:16 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-25 01:08:16 UTC</li><li>Depth (Km): 8.1</li><li>Magnitude (Mw): 3.4</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0378, 43.0612, 8.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 4.3 - 2018-04-25 09:48:41 UTC</name>
+        <styleUrl>#star_green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-25 09:48:41 UTC</li><li>Depth (Km): 28.7</li><li>Magnitude (Mw): 4.3</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.6</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.8598, 41.8785, 28.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.4 - 2018-04-25 14:53:15 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-25 14:53:15 UTC</li><li>Depth (Km): 10.8</li><li>Magnitude (ML): 3.4</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.2278, 38.2523, 10.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-04-27 20:00:52 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-27 20:00:52 UTC</li><li>Depth (Km): 5.0</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.8575, 45.5668, 5.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-04-29 16:43:39 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-04-29 16:43:39 UTC</li><li>Depth (Km): 9.6</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.051, 43.071, 9.6</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.6 - 2018-05-01 05:16:58 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-01 05:16:58 UTC</li><li>Depth (Km): 7.4</li><li>Magnitude (ML): 3.6</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>10.9312, 43.228, 7.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2018-05-02 19:21:10 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-02 19:21:10 UTC</li><li>Depth (Km): 8.5</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0348, 43.032, 8.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2018-05-02 21:20:07 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-02 21:20:07 UTC</li><li>Depth (Km): 7.8</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0337, 43.0318, 7.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2018-05-03 14:19:09 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-03 14:19:09 UTC</li><li>Depth (Km): 5.1</li><li>Magnitude (ML): 3.3</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>11.7057, 44.0587, 5.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.6 - 2018-05-03 18:46:04 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-03 18:46:04 UTC</li><li>Depth (Km): 5.2</li><li>Magnitude (ML): 3.6</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>11.725, 44.0462, 5.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2018-05-04 14:47:38 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-04 14:47:38 UTC</li><li>Depth (Km): 9.0</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0453, 43.0347, 9.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-05-04 21:36:38 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-04 21:36:38 UTC</li><li>Depth (Km): 2.9</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>7.4777, 47.8328, 2.9</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2018-05-08 16:24:14 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-08 16:24:14 UTC</li><li>Depth (Km): 28.0</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.697, 42.8998, 28.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-05-08 17:59:09 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-08 17:59:09 UTC</li><li>Depth (Km): 8.7</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0473, 43.0327, 8.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.6 - 2018-05-09 21:48:01 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-09 21:48:01 UTC</li><li>Depth (Km): 9.1</li><li>Magnitude (ML): 3.6</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.1048, 46.3032, 9.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2018-05-12 09:00:34 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-12 09:00:34 UTC</li><li>Depth (Km): 30.7</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>12.7987, 43.9892, 30.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2018-05-12 11:31:07 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-12 11:31:07 UTC</li><li>Depth (Km): 17.8</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.1557, 37.9843, 17.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-05-12 14:04:50 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-12 14:04:50 UTC</li><li>Depth (Km): 10.0</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.851, 34.376, 10.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2018-05-16 14:45:01 UTC</name>
+        <styleUrl>#purple</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-16 14:45:01 UTC</li><li>Depth (Km): 362.7</li><li>Magnitude (ML): 3.3</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.553, 39.1487, 362.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-05-19 11:01:56 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-19 11:01:56 UTC</li><li>Depth (Km): 34.3</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.8737, 37.7065, 34.3</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.9 - 2018-05-19 16:41:21 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-19 16:41:21 UTC</li><li>Depth (Km): 28.7</li><li>Magnitude (Mw): 3.9</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>9.6822, 44.8233, 28.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2018-05-20 16:43:40 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-20 16:43:40 UTC</li><li>Depth (Km): 6.9</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0097, 43.0737, 6.9</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.9 - 2018-05-21 08:49:26 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-21 08:49:26 UTC</li><li>Depth (Km): 8.4</li><li>Magnitude (Mw): 3.9</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0158, 43.0822, 8.4</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.9 - 2018-05-21 12:21:30 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-21 12:21:30 UTC</li><li>Depth (Km): 8.5</li><li>Magnitude (ML): 3.9</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.0978, 36.0047, 8.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.4 - 2018-05-21 12:38:35 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-21 12:38:35 UTC</li><li>Depth (Km): 13.1</li><li>Magnitude (ML): 3.4</li><li>Author: BULLETIN-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.3148, 42.6182, 13.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.3 - 2018-05-22 05:15:38 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-22 05:15:38 UTC</li><li>Depth (Km): 26.0</li><li>Magnitude (ML): 3.3</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>16.2958, 37.4073, 26.0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2018-05-24 04:49:42 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-24 04:49:42 UTC</li><li>Depth (Km): 22.7</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV-CT</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>14.976, 37.795, 22.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.2 - 2018-05-25 10:28:11 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-25 10:28:11 UTC</li><li>Depth (Km): 16.2</li><li>Magnitude (ML): 3.2</li><li>Author: SURVEY-INGV-CT</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.086, 37.754, 16.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-05-28 10:41:25 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-05-28 10:41:25 UTC</li><li>Depth (Km): 9.8</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.2893, 42.4092, 9.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 3.4 - 2018-06-02 07:40:54 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-06-02 07:40:54 UTC</li><li>Depth (Km): 4.7</li><li>Magnitude (Mw): 3.4</li><li>Author: SURVEY-INGV-CT</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.111, 37.713, 4.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2018-06-03 23:20:21 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-06-03 23:20:21 UTC</li><li>Depth (Km): 10.1</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.1223, 42.4928, 10.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2018-06-06 05:26:57 UTC</name>
+        <styleUrl>#yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-06-06 05:26:57 UTC</li><li>Depth (Km): 11.7</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>16.0615, 37.1873, 11.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.0 - 2018-06-11 17:11:38 UTC</name>
+        <styleUrl>#blue</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-06-11 17:11:38 UTC</li><li>Depth (Km): 62.2</li><li>Magnitude (ML): 3.0</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>16.1008, 45.3092, 62.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2018-06-13 19:26:50 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-06-13 19:26:50 UTC</li><li>Depth (Km): 5.9</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>13.5703, 42.4647, 5.9</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.5 - 2018-06-14 12:23:19 UTC</name>
+        <styleUrl>#orange</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-06-14 12:23:19 UTC</li><li>Depth (Km): 2.7</li><li>Magnitude (ML): 3.5</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.4343, 45.5858, 2.7</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.1 - 2018-06-20 06:03:32 UTC</name>
+        <styleUrl>#purple</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-06-20 06:03:32 UTC</li><li>Depth (Km): 322.2</li><li>Magnitude (ML): 3.1</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>15.0175, 40.5513, 322.2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mw 5.3 - 2018-06-25 05:14:47 UTC</name>
+        <styleUrl>#star_yellow</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-06-25 05:14:47 UTC</li><li>Depth (Km): 19.1</li><li>Magnitude (Mw): 5.3</li><li>Author: SURVEY-INGV-A</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.7</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>21.4058, 36.7348, 19.1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ML 3.5 - 2018-06-26 02:19:37 UTC</name>
+        <styleUrl>#green</styleUrl>
+        <description><![CDATA[<ul><li>Origin Time (UTC): 2018-06-26 02:19:37 UTC</li><li>Depth (Km): 31.8</li><li>Magnitude (ML): 3.5</li><li>Author: SURVEY-INGV</li></ul>]]></description>
+        <Style>
+          <IconStyle>
+            <scale>0.4</scale>
+          </IconStyle>
+        </Style>
+        <Point>
+          <coordinates>16.7433, 39.3822, 31.8</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

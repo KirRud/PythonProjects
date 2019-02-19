@@ -1,0 +1,62 @@
+0                                Braund, Mr. Owen Harris
+1      Cumings, Mrs. John Bradley (Florence Briggs Th...
+2                                 Heikkinen, Miss. Laina
+3           Futrelle, Mrs. Jacques Heath (Lily May Peel)
+4                               Allen, Mr. William Henry
+5                                       Moran, Mr. James
+6                                McCarthy, Mr. Timothy J
+7                         Palsson, Master. Gosta Leonard
+8      Johnson, Mrs. Oscar W (Elisabeth Vilhelmina Berg)
+9                    Nasser, Mrs. Nicholas (Adele Achem)
+10                       Sandstrom, Miss. Marguerite Rut
+11                              Bonnell, Miss. Elizabeth
+12                        Saundercock, Mr. William Henry
+13                           Andersson, Mr. Anders Johan
+14                  Vestrom, Miss. Hulda Amanda Adolfina
+15                      Hewlett, Mrs. (Mary D Kingcome) 
+16                                  Rice, Master. Eugene
+17                          Williams, Mr. Charles Eugene
+18     Vander Planke, Mrs. Julius (Emelia Maria Vande...
+19                               Masselmani, Mrs. Fatima
+20                                  Fynney, Mr. Joseph J
+21                                 Beesley, Mr. Lawrence
+22                           McGowan, Miss. Anna "Annie"
+23                          Sloper, Mr. William Thompson
+24                         Palsson, Miss. Torborg Danira
+25     Asplund, Mrs. Carl Oscar (Selma Augusta Emilia...
+26                               Emir, Mr. Farred Chehab
+27                        Fortune, Mr. Charles Alexander
+28                         O'Dwyer, Miss. Ellen "Nellie"
+29                                   Todoroff, Mr. Lalio
+                             ...                        
+861                          Giles, Mr. Frederick Edward
+862    Swift, Mrs. Frederick Joel (Margaret Welles Ba...
+863                    Sage, Miss. Dorothy Edith "Dolly"
+864                               Gill, Mr. John William
+865                             Bystrom, Mrs. (Karolina)
+866                         Duran y More, Miss. Asuncion
+867                 Roebling, Mr. Washington Augustus II
+868                          van Melkebeke, Mr. Philemon
+869                      Johnson, Master. Harold Theodor
+870                                    Balkic, Mr. Cerin
+871     Beckwith, Mrs. Richard Leonard (Sallie Monypeny)
+872                             Carlsson, Mr. Frans Olof
+873                          Vander Cruyssen, Mr. Victor
+874                Abelson, Mrs. Samuel (Hannah Wizosky)
+875                     Najib, Miss. Adele Kiamie "Jane"
+876                        Gustafsson, Mr. Alfred Ossian
+877                                 Petroff, Mr. Nedelio
+878                                   Laleff, Mr. Kristo
+879        Potter, Mrs. Thomas Jr (Lily Alexenia Wilson)
+880         Shelley, Mrs. William (Imanita Parrish Hall)
+881                                   Markun, Mr. Johann
+882                         Dahlberg, Miss. Gerda Ulrika
+883                        Banfield, Mr. Frederick James
+884                               Sutehall, Mr. Henry Jr
+885                 Rice, Mrs. William (Margaret Norton)
+886                                Montvila, Rev. Juozas
+887                         Graham, Miss. Margaret Edith
+888             Johnston, Miss. Catherine Helen "Carrie"
+889                                Behr, Mr. Karl Howell
+890                                  Dooley, Mr. Patrick
+Name: Name, Length: 891, dtype: object
